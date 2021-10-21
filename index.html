@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<title>Rock Paper Scissors</title>
+	</head>
+	<body>
+		<div class="container text-center my-5">
+			<h1 class="mb-5">Rock Paper Scissors</h1>
+			<div class="row mb-5">
+				<div class="col-4">
+					<h2>Player</h2>
+					<h2><span class="badge bg-primary" id="player-score">0</span></h2>
+				</div>
+				<div class="col-4">
+					<i role="button" class="fas fa-sync" data-bs-toggle="tooltip" title="Reset Scores" onclick="updateScore(0, 0);"></i>
+				</div>
+				<div class="col-4">
+					<h2>Computer</h2>
+					<h2><span class="badge bg-danger" id="computer-score">0</span></h2>
+				</div>
+			</div>
+			<i role="button" class="fas fa-hand-rock fa-fw fa-5x" data-bs-toggle="tooltip" title="Rock" onclick="playRound('Rock');"></i>
+			<i role="button" class="fas fa-hand-paper fa-fw fa-5x" data-bs-toggle="tooltip" title="Paper" onclick="playRound('Paper');"></i>
+			<i role="button" class="fas fa-hand-scissors fa-fw fa-5x" data-bs-toggle="tooltip" title="Scissors" onclick="playRound('Scissors');"></i>
+			<div class="fixed-bottom my-5">
+				<small>Developed by <a href="https://robertd.co.uk">Robert Dixon</a>.</small>
+			</div>
+		</div>
+		<div class="modal text-center" id="winner-announcement">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="round-winner"></h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p id="round-summary"></p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-bs-dismiss="modal">Next Round</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
