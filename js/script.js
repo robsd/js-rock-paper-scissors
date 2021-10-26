@@ -12,9 +12,9 @@ choices = ['Rock', 'Paper', 'Scissors'];
 player = 0;
 computer = 0;
 
-function updateScore(player, computer) {
-	player = player;
-	computer = computer;
+function updateScore(playerNew, computerNew) {
+	player = playerNew;
+	computer = computerNew;
 	playerScore.innerHTML = player;
 	computerScore.innerHTML = computer;
 }
